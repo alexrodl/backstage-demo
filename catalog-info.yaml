@@ -1,0 +1,18 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: API_A
+  description: The first API
+  tags:
+    - rest
+  links:
+    - url: https://dev.azure.com/alexdam1989/Test_CommonYAML/_git/API_A
+      title: Source Code
+      icon: code
+
+spec:
+  type: providerapi
+  lifecycle: production
+  owner: team-a
+  dependsOn: ["resource:artists-db"]
+  apiConsumedBy: ["component:www-artist"]
